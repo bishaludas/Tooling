@@ -12,3 +12,5 @@ https://github.com/junegunn/vim-plug
 :PlugInstall
 ```
 <img src="https://raw.githubusercontent.com/junegunn/i/master/vim-plug/installer.gif" height="450">
+
+<img src="https://i.imgur.com/yD3Wmac.png" height="450">
