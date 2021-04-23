@@ -13,4 +13,5 @@ https://github.com/junegunn/vim-plug
 ```
 <img src="https://raw.githubusercontent.com/junegunn/i/master/vim-plug/installer.gif" height="450">
 
+- Copy the colors folder from repo into ~/.vim/ directory
 <img src="https://i.imgur.com/yD3Wmac.png" height="450">
