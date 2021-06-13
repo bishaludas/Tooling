@@ -36,6 +36,15 @@ nmap <C-p> :FZF<CR>
 "remove search highlight"
 nmap <Leader><space> :nohlsearch<CR>
 
+nnoremap tn :tabnew<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-w> :bd<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+
+
+
 "------------Git gutter------------------"
 let g:gitgutter_sign_added = '✚'
 let g:gitgutter_sign_modified = '✹'
@@ -45,7 +54,7 @@ let g:gitgutter_sign_modified_removed = '-'
 
 "---------airline------------
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 2
 
 "------------Python Indentation Guide-----------------"
 " show existing tab with 4 spaces width
