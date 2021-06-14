@@ -6,7 +6,7 @@ set number
 set hlsearch
 set expandtab
 let mapleader="."
-	
+
 call plug#begin('~/.vim/plugged')
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -15,19 +15,21 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
 
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mlaursen/vim-react-snippets'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
-"Nerdtree
+"------Nerdtreea-------------------------"
 let g:NERDTreeShowHidden=1
+"------light line theme
+set laststatus=2
 
 "--------------mappings------------------"
 "Toggle nerd table"
@@ -36,14 +38,21 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-p> :FZF<CR>
 "remove search highlight"
 nmap <Leader><space> :nohlsearch<CR>
+"vim search text in multiple files
+nmap <S-f> :Ag<CR>
+"show terminal and place it below"
+nmap tt :term<CR>
+set splitbelow
 
-nnoremap tn :tabnew<CR>
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-w> :bd<CR>
-nnoremap <silent> <A-Left> :tabm -1<CR>
-nnoremap <silent> <A-Right> :tabm +1<CR>
+"----------open new tab-------------------"
+nmap tn :tabnew<CR>
+nmap <C-Left> :tabprevious<CR>
+nmap <C-Right> :tabnext<CR>
+nmap <C-w> :bd<CR>
+nmap <silent> <A-Left> :tabm -1<CR>
+nmap <silent> <A-Right> :tabm +1<CR>
 
+"------Brackets quotes auto complete------"
 inoremap " ""<left>
 inoremap ' ''<left>
 "inoremap ( ()<left>
@@ -60,12 +69,15 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
 
-"---------airline------------
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 2
+"show git diff highlight"
+nmap <Leader>df :GitGutterLineHighlightsToggle<CR>
+nmap <Leader>hc :pclose<CR>
+".hp hunk preview
+".hu undo code changes
+
 
 "------------Python Indentation Guide-----------------"
-" show existing tab with 4 spaces width
+" show existing tab with 4 spaces width, Replace 2 with 4
 set tabstop=2
 " when indenting with '>', use 4 spaces width
 set shiftwidth=2
@@ -84,6 +96,4 @@ let g:javascript_plugin_jsdoc=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-
 
