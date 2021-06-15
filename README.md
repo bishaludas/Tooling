@@ -11,14 +11,7 @@ https://github.com/junegunn/vim-plug
 ```
 :PlugInstall
 ```
+- Copy the colors folder from repo into ~/.vim/ directory
 
 <img src="https://raw.githubusercontent.com/junegunn/i/master/vim-plug/installer.gif" height="450">
 
-- Copy the colors folder from repo into ~/.vim/ directory
-## Sublime Monokai theme
-<img src="https://i.imgur.com/yD3Wmac.png" height="450">
-
-Install fonts for powerline plugin
-```
-sudo apt-get install fonts-powerline
-```
