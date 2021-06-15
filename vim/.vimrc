@@ -30,6 +30,8 @@ call plug#end()
 let g:NERDTreeShowHidden=1
 "------light line theme
 set laststatus=2
+" Quotes not shown in json fix
+let g:indentLine_setConceal = 0 
 
 "--------------mappings------------------"
 "Toggle nerd table"
