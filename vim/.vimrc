@@ -31,7 +31,14 @@ let g:NERDTreeShowHidden=1
 "------light line theme
 set laststatus=2
 " Quotes not shown in json fix
-let g:indentLine_setConceal = 0 
+let g:indentLine_setConceal = 0
+" Prettier fix
+let &t_TI = ""
+let &t_TE = ""
+let g:prettier#config#print_width = '100'
+let g:prettier#config#tab_width = '2'
+
+
 
 "--------------mappings------------------"
 "Toggle nerd table"
@@ -80,11 +87,11 @@ nmap <Leader>hc :pclose<CR>
 
 "------------Python Indentation Guide-----------------"
 " show existing tab with 4 spaces width, Replace 2 with 4
-set tabstop=2
+set tabstop=4
 " when indenting with '>', use 4 spaces width
-set shiftwidth=2
+set shiftwidth=4
 " On Insert mode pressing tab, insert 4 spaces
-set softtabstop=2
+set softtabstop=4
 " Select indent character line
 let g:indentLine_char_list = ['┊']
 
