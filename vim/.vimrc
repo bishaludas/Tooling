@@ -52,6 +52,11 @@ nmap <S-f> :Ag<CR>
 "show terminal and place it below"
 nmap tt :term<CR>
 set splitbelow
+"move line above"
+nmap <C-S-Up> :m -2<CR>
+"move line below"
+nmap <C-S-Down> :m +1<CR>
+
 
 "----------open new tab-------------------"
 nmap tn :tabnew<CR>
